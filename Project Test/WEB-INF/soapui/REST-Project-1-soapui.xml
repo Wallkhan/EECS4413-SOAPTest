@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1bfb5cf0-375d-47ef-b112-b5978ea8190d" activeEnvironment="Default" name="REST Project 1" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="9e11341f-5619-4b1d-940f-d96bb04a8701" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://eecs-4413-project.mybluemix.net" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://Wall-E:8080/</con:endpoint><con:endpoint>http://Wall-E:8088/</con:endpoint><con:endpoint>http://Wall-E:8089/</con:endpoint><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint></con:endpoints><con:resource name="Book" path="/rest/orders/book/" id="34322d37-8455-4227-b86e-c8b13bb3ae12"><con:settings/><con:parameters><con:parameter><con:name>bid</con:name><con:value>006</con:value><con:style>QUERY</con:style><con:default>006</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Book 1" id="fef3e107-dd24-4be8-bfd7-a5d6c32b5715" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/plain</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="e7d29543-1aac-48d6-90ac-822c5c39e601" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@strip-whitespaces">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint><con:request/><con:originalUri>https://eecs-4413-project.mybluemix.net/rest/orders/book</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bid" value="006" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>bid</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="bid" path="/rest/catalog/book/" id="ada0b180-c8f4-4499-8b5f-9c579ddfa4f6"><con:settings/><con:parameters><con:parameter><con:name>bid</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="011f44c7-0b58-493a-bfa0-d09a8bbf6388" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:book="https://eecs-4413-project.mybluemix.net/rest/catalog/book/">book:Response</con:element></con:representation><con:request name="Request 1" id="cf574513-677a-4522-aee2-49b9cf079422" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint><con:request/><con:originalUri>https://eecs-4413-project.mybluemix.net/rest/catalog/book/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bid" value="007" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>bid</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="a4fe1631-0d32-451c-a5b0-39b437d7faa3" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="914180fa-39be-4453-9b8d-de6ea09fe64e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="c23d536e-b0f7-40be-b24b-aeafb6609629"><con:settings/><con:config service="https://eecs-4413-project.mybluemix.net" resourcePath="/rest/orders/book/" methodName="Book 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="e7d29543-1aac-48d6-90ac-822c5c39e601" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@strip-whitespaces">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint><con:request/><con:originalUri>https://eecs-4413-project.mybluemix.net/rest/orders/book</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bid" value="004" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>bid</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="REST Request 2" id="1d309079-f3e1-4612-8ab5-977a0971b64c"><con:settings/><con:config service="https://eecs-4413-project.mybluemix.net" methodName="Book 1" resourcePath="/rest/orders/book/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request 2" id="d7ade01a-b201-44a3-86ab-1a13a281495a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint><con:request/><con:originalUri>http://Wall-E/rest/orders/book/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bid" value="001" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="REST Request 3" id="46942258-d083-47e2-a363-876a783f228f"><con:settings/><con:config service="https://eecs-4413-project.mybluemix.net" resourcePath="/rest/catalog/book/" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request 3" id="cf574513-677a-4522-aee2-49b9cf079422" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint><con:request/><con:originalUri>https://eecs-4413-project.mybluemix.net/rest/catalog/book/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bid" value="004" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>bid</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Book 1 - Request 1" id="ac1abe2a-777b-47aa-9a9e-adf9848a675b"><con:settings/><con:config service="https://eecs-4413-project.mybluemix.net" resourcePath="/rest/orders/book/" methodName="Book 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Book 1 - Request 1" id="e7d29543-1aac-48d6-90ac-822c5c39e601" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@strip-whitespaces">true</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint><con:request/><con:originalUri>https://eecs-4413-project.mybluemix.net/rest/orders/book</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bid" value="006" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>bid</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Copy of REST Request 2" id="5f3f1454-eb9d-4888-b41c-d608e3df0c6d"><con:settings/><con:config service="https://eecs-4413-project.mybluemix.net" methodName="Book 1" resourcePath="/rest/orders/book/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Copy of REST Request 2" id="d7ade01a-b201-44a3-86ab-1a13a281495a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint><con:request/><con:originalUri>http://Wall-E/rest/orders/book/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bid" value="001" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Copy of REST Request 3" id="155b845d-768a-4b4b-b2ae-03a0f2b328b3"><con:settings/><con:config service="https://eecs-4413-project.mybluemix.net" resourcePath="/rest/catalog/book/" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Copy of REST Request 3" id="cf574513-677a-4522-aee2-49b9cf079422" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint><con:request/><con:originalUri>https://eecs-4413-project.mybluemix.net/rest/catalog/book/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bid" value="004" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>bid</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="130d3d5f-200b-4e7d-aaa7-ba479c333c29" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 2" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="655f3602-d834-4bf1-a0f3-30ae5a9a9c83"><con:settings/><con:config service="https://eecs-4413-project.mybluemix.net" resourcePath="/rest/catalog/book/" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="cf574513-677a-4522-aee2-49b9cf079422" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://eecs-4413-project.mybluemix.net</con:endpoint><con:request/><con:originalUri>https://eecs-4413-project.mybluemix.net/rest/catalog/book/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="bid" value="007" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>bid</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:restMockService id="d9765597-bd58-486c-83ca-cb00f875ad8f" port="8088" path="/" host="Wall-E" name="REST MockService 1" docroot=""><con:settings/><con:properties/><con:restMockAction name="/rest/orders/book/" method="GET" resourcePath="/rest/orders/book/" id="7c2f522f-93f1-43f9-bdc3-b17c7a2da804"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*&#13;
+// Script dispatcher is used to select a response based on the incoming request.&#13;
+// Here are few examples showing how to match based on path, query param, header and body&#13;
+&#13;
+// Match based on path&#13;
+def requestPath = mockRequest.getPath()&#13;
+log.info "Path: "+ requestPath&#13;
+&#13;
+if( requestPath.contains("json") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "JSON Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on query parameter&#13;
+def queryString = mockRequest.getRequest().getQueryString()&#13;
+log.info "QueryString: " + queryString&#13;
+&#13;
+if( queryString.contains("stockholm") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response Stockholm"&#13;
+}&#13;
+else if( queryString.contains("london") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response London"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on header&#13;
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")&#13;
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList&#13;
+&#13;
+if( acceptEncodingHeaderList.contains("gzip,deflate") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "GZiped Response"&#13;
+}&#13;
+&#13;
+&#13;
+// Match based on body&#13;
+def requestBody = mockRequest.getRequestContent()&#13;
+log.info "Request body: " + requestBody&#13;
+&#13;
+if( requestBody.contains("some data") )&#13;
+{&#13;
+    // return the name of the response you want to dispatch&#13;
+    return "Response N"&#13;
+}&#13;
+*/&#13;
+</con:dispatchPath><con:response name="Response 1" id="03940beb-ee9d-4376-bae8-99085b004136" httpResponseStatus="200" mediaType="text/xml"><con:settings/><con:responseContent>&lt;data contentType="text/plain" contentLength="9721">&lt;![CDATA[[ {
+  "address": {
+    "street": "123 Yonge St",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "K1E 6T5",
+    "phone": "647-123-4567",
+    "city": "Toronto",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "123 Yonge St",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "K1E 6T5",
+    "phone": "647-123-4567",
+    "city": "Toronto",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "123 Yonge St",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "K1E 6T5",
+    "phone": "647-123-4567",
+    "city": "Toronto",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "445 Avenue rd",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "M1C 6K5",
+    "phone": "416-123-8569",
+    "city": "Toronto",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "445 Avenue rd",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "M1C 6K5",
+    "phone": "416-123-8569",
+    "city": "Toronto",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "445 Avenue rd",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "M1C 6K5",
+    "phone": "416-123-8569",
+    "city": "Toronto",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "789 Keele St.",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "K3C 9T5",
+    "phone": "416-123-9568",
+    "city": "Toronto",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "789 Keele St.",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "K3C 9T5",
+    "phone": "416-123-9568",
+    "city": "Toronto",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "789 Keele St.",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "K3C 9T5",
+    "phone": "416-123-9568",
+    "city": "Toronto",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "123123123",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "123123123",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "123123123",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdfasdfasdf",
+    "phone": "4169671111",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdfasdfasdf",
+    "phone": "4169671111",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdfasdfasdf",
+    "phone": "4169671111",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "123 brampton road",
+    "province": "Ontario",
+    "country": "Canada",
+    "zip": "l4b203",
+    "phone": "6471119999",
+    "city": "Brampton",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "123 brampton road",
+    "province": "Ontario",
+    "country": "Canada",
+    "zip": "l4b203",
+    "phone": "6471119999",
+    "city": "Brampton",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "123 brampton road",
+    "province": "Ontario",
+    "country": "Canada",
+    "zip": "l4b203",
+    "phone": "6471119999",
+    "city": "Brampton",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "911",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "911",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "911",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "911",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "911",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "911",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "24 York ave east",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "Y0R 1U0",
+    "phone": "416416416",
+    "city": "York",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "24 York ave east",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "Y0R 1U0",
+    "phone": "416416416",
+    "city": "York",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "24 York ave east",
+    "province": "ON",
+    "country": "Canada",
+    "zip": "Y0R 1U0",
+    "phone": "416416416",
+    "city": "York",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "416416416",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "416416416",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}, {
+  "address": {
+    "street": "asdf",
+    "province": "asdf",
+    "country": "Canada",
+    "zip": "asdf",
+    "phone": "416416416",
+    "city": "asdf",
+    "AID": 0
+  },
+  "book": {
+    "bid": "006",
+    "title": "The Vampires Among Us",
+    "author": "R Guiley",
+    "price": 192,
+    "category": "Fiction"
+  }
+}]]]&gt;&lt;/data></con:responseContent><con:header><con:name>All orders with bid = 006</con:name><con:value/></con:header></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
